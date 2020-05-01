@@ -48,7 +48,7 @@ var path = {
 
 var config = {
     server: {
-        baseDir: "./dist"
+        baseDir: './dist'
     },
     tunnel: true,
     host: 'localhost',
@@ -58,12 +58,12 @@ var config = {
 
 gulp.task('vendorJs:build', function () {
     gulp.src( mainBowerFiles('**/*.js') ) //Выберем файлы по нужному пути
-        .pipe(gulp.dest(path.vendor.js)) //Выплюнем готовый файл в app
+        .pipe(gulp.dest(path.vendor.js)); //Выплюнем готовый файл в app
 });
 
 gulp.task('vendorCss:build', function () {
     gulp.src( mainBowerFiles('**/*.css') ) //Выберем файлы по нужному пути
-        .pipe(gulp.dest(path.vendor.css)) //И в app
+        .pipe(gulp.dest(path.vendor.css)); //И в app
 });
 
 gulp.task('html:build', function () {
@@ -113,7 +113,7 @@ gulp.task('image:build', function () {
 
 gulp.task('fonts:build', function() {
     gulp.src(path.app.fonts)
-        .pipe(gulp.dest(path.dist.fonts))
+        .pipe(gulp.dest(path.dist.fonts));
 });
 
 gulp.task('build', [
